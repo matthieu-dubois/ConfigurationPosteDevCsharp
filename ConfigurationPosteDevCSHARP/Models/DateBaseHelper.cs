@@ -20,7 +20,7 @@ namespace ConfigurationPosteDevCSHARP.Models
                     Port = 3306,
                     UserID = "matthieu",
                     Password = "mdp",
-                    Database = "Configuration"
+                    Database = "configuration"
                 };
                 string hello = null;
 
