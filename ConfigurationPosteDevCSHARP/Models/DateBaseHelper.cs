@@ -17,9 +17,9 @@ namespace ConfigurationPosteDevCSHARP.Models
                 MySqlConnectionStringBuilder connectionBuilder = new MySqlConnectionStringBuilder
                 {
                     Server = "localhost",
-                    Port = 3307,
-                    UserID = "root",
-                    Password = "",
+                    Port = 3306,
+                    UserID = "matthieu",
+                    Password = "mdp",
                     Database = "Configuration"
                 };
                 string hello = null;
