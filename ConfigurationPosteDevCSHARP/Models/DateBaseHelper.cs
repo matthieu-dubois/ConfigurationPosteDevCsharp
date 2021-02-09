@@ -36,7 +36,7 @@ namespace ConfigurationPosteDevCSHARP.Models
                 {
                     connection.Open();
 
-                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM description  WHERE Id = 1;", connection))
+                    using (MySqlCommand command = new MySqlCommand("SELECT * FROM description  WHERE Id = 2;", connection))
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {

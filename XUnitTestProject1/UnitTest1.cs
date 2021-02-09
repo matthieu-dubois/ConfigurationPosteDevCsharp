@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         {
             string mdu = DateBaseHelper.Mdu();
 
-            Assert.Equal("Ceci est un test", mdu);
+            Assert.Equal("Test pour la video", mdu);
             //Assert.Equal("Hello World", mdu);
 
 
