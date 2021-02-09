@@ -16,13 +16,21 @@ namespace ConfigurationPosteDevCSHARP.Models
             {
                 MySqlConnectionStringBuilder connectionBuilder = new MySqlConnectionStringBuilder
                 {
+                    Database = "configuration",
                     Server = "localhost",
+                    // local 
+                    //Port = 3307,
+                    //UserID = "root",
+                    //Password = "",
+
+                    // serveur 
+
                     Port = 3306,
                     UserID = "matthieu",
-                    Password = "mdp",
-                    Database = "configuration"
+                    Password = "mdp"
+
                 };
-                string hello = null;
+                string mdu = null;
 
                 using (MySqlConnection connection = new MySqlConnection(connectionBuilder.ToString()))
                 {
@@ -33,30 +41,18 @@ namespace ConfigurationPosteDevCSHARP.Models
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
-                                hello = reader.GetString("Description");
+                                mdu = reader.GetString("Description");
                         }
                     }
                 }
 
-                return hello;
+                return mdu;
             }
             catch (Exception e)
             {
                 Debug.WriteLine(e);
                 throw e;
             }
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
